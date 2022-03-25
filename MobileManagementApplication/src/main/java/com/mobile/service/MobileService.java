@@ -6,13 +6,13 @@ import java.util.Optional;
 import com.mobile.entity.Mobile;
 
 public interface MobileService {
-	Mobile addMobile(Mobile mobile);
+	Mobile addMobile(Mobile mobile); //add mobile method
+ 
+	Mobile updateMobile(Mobile mobile); // update mobile method
 
-	Mobile updateMobile(Mobile mobile);
+	void deleteMobile(int mobileId); //delete mobile method
 
-	void deleteMobile(int mobileId);
+	Optional<Mobile> getMobile(int mobileId); //get mobile method
 
-	Optional<Mobile> getMobile(int mobileId);
-
-	Iterable<Mobile> getAllMobiles();
+	Iterable<Mobile> getAllMobiles(); //get all mobile method
 }
