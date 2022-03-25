@@ -21,7 +21,7 @@ import com.mobile.service.MobileService;
 public class MobileController {
 	@Autowired
 	MobileService service;
-	@PostMapping("/addMobile") //method level url : http://localhost:2828/mobile/addmobile
+	@PostMapping("/addMobile") //method level url : http://localhost:2828/mobile/addMobile
 	public Mobile addMobile(@RequestBody Mobile mobile){
 		return service.addMobile(mobile);
 	}
