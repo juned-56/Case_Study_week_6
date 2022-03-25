@@ -5,8 +5,8 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-@Entity
-@Table(name = "mobiledata_info")
+@Entity //table creation
+@Table(name = "mobiledata_info") //set the name of table
 public class Mobile {
 	@Id
 	@Column(name = "mid", length = 20)
@@ -21,6 +21,7 @@ public class Mobile {
 	private int mobileWarenty;
 	@Column(name = "mimei", length = 20)
 	private int mobileIMEINumber;
+	//generate getters and setters
 	public int getMobileId() {
 		return mobileId;
 	}
@@ -57,9 +58,11 @@ public class Mobile {
 	public void setMobileIMEINumber(int mobileIMEINumber) {
 		this.mobileIMEINumber = mobileIMEINumber;
 	}
+	//default constructor
 	public Mobile() {
 		// TODO Auto-generated constructor stub
 	}
+	//perametrized constructor
 	public Mobile(int mobileId, String mobileName, String mobileTYPE, int mobilePrice, int mobileWarenty,
 			int mobileIMEINumber) {
 		super();
@@ -70,6 +73,7 @@ public class Mobile {
 		this.mobileWarenty = mobileWarenty;
 		this.mobileIMEINumber = mobileIMEINumber;
 	}
+	//to String method
 	@Override
 	public String toString() {
 		return "Mobile [mobileId=" + mobileId + ", mobileName=" + mobileName + ", mobileTYPE=" + mobileTYPE
