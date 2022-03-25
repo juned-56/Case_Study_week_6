@@ -19,26 +19,26 @@ public class MobileServiceImpl implements MobileService{
 	@Override
 	public Mobile addMobile(Mobile mobile) {
 		// TODO Auto-generated method stub
-		return dao.save(mobile);
+		return dao.save(mobile); //save a given entity
 	}
 	@Override
 	public void deleteMobile(int mobileId) {
 		// TODO Auto-generated method stub
-		dao.deleteById(mobileId);
+		dao.deleteById(mobileId); //Delete the entity with the given id
 	}
 	@Override
 	public Mobile updateMobile(Mobile mobile) {
 		// TODO Auto-generated method stub
-		return dao.save(mobile);
+		return dao.save(mobile); //save a given entity
 	}
 	@Override
 	public Optional<Mobile> getMobile(int mobileId) {
 		// TODO Auto-generated method stub
-		return dao.findById(mobileId);
+		return dao.findById(mobileId); //retrieve an entity by its id
 	}
 	@Override
 	public Iterable<Mobile> getAllMobiles() {
 		// TODO Auto-generated method stub
-		return dao.findAll();
+		return dao.findAll(); //returns all instances of the type
 	}
 }
